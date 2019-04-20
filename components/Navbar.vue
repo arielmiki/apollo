@@ -1,5 +1,5 @@
 <template lang='pug'>
-    v-toolbar(color='transparent').elevation-0
+    v-toolbar.elevation-0(color='transparent')
         v-spacer
         v-toolbar-items
             v-hover
@@ -9,7 +9,8 @@
             v-btn(flat) Experience
             v-btn(flat) Projects
             v-btn(flat) Skills
-            v-btn(color='secondary' href='https://blog.arielmiki.xyz' target='_blank') Blog
+            v-btn.font-weight-bold(flat color='secondary' href='https://blog.arielmiki.xyz' target='_blank') Blog 
+                v-icon chevron_right
 </template>
 
 <script>
