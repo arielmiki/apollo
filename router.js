@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import index from '@/pages/index';
+import home from '@/pages/home.vue';
 
 Vue.use(Router);
 
 const routes = [
     {
-        component: index,
+        component: home,
         path: '/',
     }
 ];

@@ -13,9 +13,4 @@ export default {
   },
 }
 </script>
-<style>
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-</style>
 
