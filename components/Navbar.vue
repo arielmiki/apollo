@@ -15,14 +15,14 @@
 
 <script>
 export default {
-  name: 'navbar',
+  name: 'Navbar',
   computed: {
     isDark: {
       set: function(value) {
-          this.$store.commit('theme/toggle');
+        this.$store.commit('theme/toggle')
       },
       get: function() {
-        return this.$store.state.theme.isDark;
+        return this.$store.state.theme.isDark
       }
     }
   }

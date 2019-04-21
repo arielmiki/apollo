@@ -1,22 +1,22 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import home from '@/pages/home.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import home from '@/pages/home.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 const routes = [
-    {
-        component: home,
-        path: '/',
-    }
-];
+  {
+    component: home,
+    path: '/'
+  }
+]
 
 const appRouter = new Router({
-    mode: 'history',
-    base: '/',
-    routes,
+  mode: 'history',
+  base: '/',
+  routes
 })
 
 export function createRouter() {
-    return appRouter
+  return appRouter
 }

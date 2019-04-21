@@ -19,11 +19,10 @@
 export default {}
 </script>
 <style scoped>
-.display-4{
+.display-4 {
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
 }
 </style>
-
