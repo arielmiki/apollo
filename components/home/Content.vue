@@ -6,7 +6,7 @@
         v-flex(shrink :style='{ width: "60vw" }')
           p.subheading.font-weight-thin
             | My name is 
-            strong.font-weight-bold.secondary--text Ariel Miki Abraham
+            strong.font-weight-bold.accent--text Ariel Miki Abraham
             . 
               . Currently, I am a final-year computer science student at <strong class='font-weight-bold'>University of Indonesia</strong>.
               My interest varies from  <strong>software development</strong>, <strong>data science</strong>,
