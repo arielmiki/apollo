@@ -1,10 +1,5 @@
 <template lang='pug'>
   v-fragment
-    v-navigation-drawer.hidden-md-and-up(v-model='drawer' app clipped)
-      v-list
-        v-list-tile(v-for='item in menu' :key='item.name' :to='item.to')
-          v-list-tile-content
-            v-list-title {{item.name}}
     v-toolbar.elevation-0(color='transparent' fixed)
       v-toolbar-side-icon.hidden-md-and-up(@click='drawer = !drawer')
       v-spacer
@@ -15,6 +10,13 @@
           v-btn.hidden-sm-and-down(v-for='item in menu' :key='item.name' :to='item.to' flat active-class='active') {{item.name}}
           v-btn.font-weight-bold(flat color='accent' href='https://blog.arielmiki.xyz' target='_blank') Blog 
                 v-icon chevron_right
+    v-navigation-drawer.hidden-md-and-up(v-model='drawer' app)
+      v-list
+        v-list-tile(v-for='item in menu' :key='item.name' :to='item.to' active-class='accent--text') 
+          v-list-tile-action
+            v-icon {{item.icon}}
+          v-list-tile-content
+            v-list-title {{item.name}}
 </template>
 
 <script>
@@ -22,34 +24,38 @@ export default {
   name: 'Navbar',
   methods: {
     toggleTheme: function() {
-      this.$store.commit('theme/toggle');
+      this.$store.commit('theme/toggle')
     }
   },
   computed: {
     isDark: function() {
-      return this.$store.state.theme.isDark;
+      return this.$store.state.theme.isDark
     }
   },
   data() {
     return {
       drawer: false,
       menu: [
-        { name: 'Home',
-          to: '/'
+        {
+          name: 'Home',
+          to: '/',
+          icon: 'home'
         },
         {
           name: 'Experience',
-          to:'experience'
+          to: 'experience',
+          icon: 'domain'
         },
         {
           name: 'Projects',
-          to:'projects'
+          to: 'projects',
+          icon: 'business_center'
         },
         {
           name: 'Skills',
-          to:'skills'
-        },
-        
+          to: 'skills',
+          icon: 'check_circle'
+        }
       ]
     }
   }
