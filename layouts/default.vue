@@ -1,15 +1,15 @@
 <template lang='pug'>
   v-app(:dark="$store.state.theme.isDark")
-    navbar()
+    Navbar
     nuxt
 </template>
 
 <script>
-import navbar from '@/components/Navbar'
+import Navbar from '@/components/ui/Navbar'
 
 export default {
   components: {
-    navbar
+    Navbar
   }
 }
 </script>
