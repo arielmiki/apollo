@@ -5,10 +5,10 @@
             v-hover
                 v-btn(flat icon slot-scope='{ hover}'  @click="$store.commit('theme/toggle')")
                     v-icon(:color='hover?"secondary":""') {{isDark?'brightness_2':'wb_sunny'}}
-            v-btn(flat) Home
-            v-btn(flat) Experience
-            v-btn(flat) Projects
-            v-btn(flat) Skills
+            v-btn(flat to='/' active-class='active') Home
+            v-btn(flat to='experience' active-class='active') Experience
+            v-btn(flat to='projects' active-class='active') Projects
+            v-btn(flat to='skills' active-class='active') Skills
             v-btn.font-weight-bold(flat color='secondary' href='https://blog.arielmiki.xyz' target='_blank') Blog 
                 v-icon chevron_right
 </template>
@@ -28,3 +28,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.active {
+  background-color: transparent;
+  /* font-weight: bold; */
+  text-decoration: underline;
+}
+</style>
