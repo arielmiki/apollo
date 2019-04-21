@@ -1,5 +1,5 @@
 <template lang='pug'>
-  v-fragment
+  fragment
     v-toolbar.elevation-0(color='transparent' fixed)
       v-toolbar-side-icon.hidden-md-and-up(@click='drawer = !drawer')
       v-spacer
@@ -16,7 +16,7 @@
           v-list-tile-action
             v-icon {{item.icon}}
           v-list-tile-content
-            v-list-title {{item.name}}
+            v-list-tile-title {{item.name}}
 </template>
 
 <script>
