@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: apollo:latest
     container_name: landing-page
     restart: always
     ports:
