@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  ghost:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: landing-page
+    restart: always
+    ports:
+      - 127.0.0.1:5000:5000
+    environment:
+      - HOST=0.0.0.0
+      - PORT=5000
+    expose:
+      - 5000
