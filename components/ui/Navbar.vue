@@ -1,5 +1,5 @@
 <template lang='pug'>
-  v-fragment
+  fragment
     v-toolbar.elevation-0(color='transparent' fixed)
       v-toolbar-side-icon.hidden-md-and-up(@click='drawer = !drawer')
       v-spacer
@@ -16,22 +16,12 @@
           v-list-tile-action
             v-icon {{item.icon}}
           v-list-tile-content
-            v-list-title {{item.name}}
+            v-list-tile-title {{item.name}}
 </template>
 
 <script>
 export default {
   name: 'Navbar',
-  methods: {
-    toggleTheme: function() {
-      this.$store.commit('theme/toggle')
-    }
-  },
-  computed: {
-    isDark: function() {
-      return this.$store.state.theme.isDark
-    }
-  },
   data() {
     return {
       drawer: false,
@@ -57,6 +47,16 @@ export default {
           icon: 'check_circle'
         }
       ]
+    }
+  },
+  computed: {
+    isDark: function() {
+      return this.$store.state.theme.isDark
+    }
+  },
+  methods: {
+    toggleTheme: function() {
+      this.$store.commit('theme/toggle')
     }
   }
 }

@@ -1,8 +1,7 @@
 <template lang='pug'>
   v-app(:dark="$store.state.theme.isDark")
     Navbar
-    v-container
-      nuxt
+    nuxt
 </template>
 
 <script>
