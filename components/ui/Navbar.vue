@@ -8,7 +8,7 @@
               v-btn(flat icon slot-scope='{ hover}'  @click='toggleTheme')
                   v-icon(:color='hover?"accent":""') {{isDark?'brightness_2':'wb_sunny'}}
           v-btn.hidden-sm-and-down(v-for='item in menu' :key='item.name' :to='item.to' flat active-class='active') {{item.name}}
-          v-btn.font-weight-bold(flat color='accent' href='https://blog.arielmiki.xyz' target='_blank') Blog 
+          v-btn.font-weight-bold(flat color='accent' :href='blogLink' target='_blank') Blog 
                 v-icon chevron_right
     v-navigation-drawer.hidden-md-and-up(v-model='drawer' app)
       v-list
@@ -20,11 +20,13 @@
 </template>
 
 <script>
+import { BLOG_LINK } from '@/constant'
 export default {
   name: 'Navbar',
   data() {
     return {
       drawer: false,
+      blogLink: BLOG_LINK,
       menu: [
         {
           name: 'Home',
