@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  ghost:
+  apollo:
     build:
       context: .
       dockerfile: Dockerfile
