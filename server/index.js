@@ -1,8 +1,8 @@
-const Koa = require('koa')
+const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 
-const app = new Koa()
+const app =  express()
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 
@@ -18,20 +18,11 @@ async function start() {
   if (config.dev) {
     const builder = new Builder(nuxt)
     await builder.build()
+  } else {
+    await nuxt.ready()
   }
 
-  app.use(ctx => {
-    ctx.status = 200 // koa defaults to 404 when it sees that status is unset
-
-    return new Promise((resolve, reject) => {
-      ctx.res.on('close', resolve)
-      ctx.res.on('finish', resolve)
-      nuxt.render(ctx.req, ctx.res, promise => {
-        // nuxt.render passes a rejected promise into callback on error.
-        promise.then(resolve).catch(reject)
-      })
-    })
-  })
+  app.use(nuxt.render)
 
   app.listen(port, host)
   consola.ready({
