@@ -8,17 +8,12 @@ services:
     image: apollo:latest
     container_name: apollo
     restart: always
-    environment:
-      - HOST=0.0.0.0
-      - PORT=5000
-    expose:
-      - 5000
     networks:
       - web
     labels:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:www.arielmiki.me"
-      - "traefik.port=5000"
+      - "traefik.port=80"
       - "traefik.frontend.protocol=https"
 
 networks:
