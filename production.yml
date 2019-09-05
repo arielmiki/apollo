@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: apollo:latest
-    container_name: landing-page
+    container_name: apollo
     restart: always
     environment:
       - HOST=0.0.0.0
