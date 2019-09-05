@@ -1,28 +1,19 @@
-FROM node:11.13.0-alpine
+FROM node:11.13.0-alpine as builder
 
-# create destination directory
-RUN mkdir -p /usr/src/nuxt-app
-WORKDIR /usr/src/nuxt-app
+RUN mkdir -p /apollo
+WORKDIR /apollo
 
-# update and install dependency
-RUN apk update && apk upgrade
-RUN apk add git
+RUN apk update && apk upgrade && apk add --no-cache git
 
-# copy the app, note .dockerignore
-COPY . /usr/src/nuxt-app/
+COPY package.json package-lock.json /apollo/
 RUN npm install
 
-# build necessary, even if no static files are needed,
-# since it builds the server as well
-RUN npm run build
+COPY . /apollo/
+RUN npm run generate
 
-# expose 5000 on container
-EXPOSE 5000
+FROM nginx:stable-alpine
 
-# set app serving to permissive / assigned
-ENV HOST=0.0.0.0
-# set app port
-ENV PORT=5000
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# start the app
-CMD [ "npm", "start" ]
+COPY --from=builder /apollo/dist /var/www/html
