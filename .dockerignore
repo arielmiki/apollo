@@ -1,0 +1,7 @@
+node_modules
+.nuxt
+.git
+dist
+Dockerfile
+docker-compose.yml
+production.yml

@@ -1,10 +1,8 @@
 <template lang='pug'>
-    v-layout.align-center.justify-center.fill-height(column)
+    v-container(fill-height fluid justify-center)
         v-flex(shrink)
             h1.display-4 Under Construction
 </template>
 <script>
-export default {
-    
-}
+export default {}
 </script>
