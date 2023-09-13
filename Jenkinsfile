@@ -20,15 +20,19 @@ pipeline {
 
       stage('Build Docker Image') {
         steps {
-            app = docker.build("${IMAGE_NAME}")
+            script {
+                def app = docker.build("${IMAGE_NAME}")
+            }
         }   
       }
 
       stage ('Push Image') {
         steps {
-            docker.withRegistry("${REGISTRY_HOST}") {
-                app.push("${BUILD_ID}")
-                app.push("latest")
+            script {
+                docker.withRegistry("${REGISTRY_HOST}") {
+                    app.push("${BUILD_ID}")
+                    app.push("latest")
+                }
             }
         }
       }
