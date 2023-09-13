@@ -8,25 +8,22 @@ pipeline {
 
      REGISTRY_HOST = "registry:5000"
      SERVICE_NAME = "apollo"
-     REPOSITORY_TAG = "${REGISTRY_HOST}/arielmiki/${SERVICE_NAME}:${BUILD_ID}"
+     IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
    }
 
    stages {
       stage('Clone Repository') {
-        steps {
-            checkout scm
-        }
+        checkout scm
       }
 
       stage('Build Docker Image') {
-         steps {
-           sh 'docker image build -t ${REPOSITORY_TAG} . --no-cache'
-         }
+         app = docker.build("${IMAGE_NAME}")
       }
 
       stage ('Push Image') {
-        steps {
-            sh 'docker image push ${REPOSITORY_TAG}'
+        docker.withRegistry("${REGISTRY_HOST}") {
+            app.push("${BUILD_ID}")
+            app.push("latest")
         }
       }
 
