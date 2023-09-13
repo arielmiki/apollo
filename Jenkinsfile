@@ -11,7 +11,7 @@ pipeline {
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
    }
 
-    stage('Initialize'){
+    stages('Initialize'){
         steps {
             def dockerHome = tool 'docker-builder'
             env.PATH = "${dockerHome}/bin:${env.PATH}"
