@@ -13,17 +13,23 @@ pipeline {
 
    stages {
       stage('Clone Repository') {
-        checkout scm
+        steps {
+            checkout scm
+        }
       }
 
       stage('Build Docker Image') {
-         app = docker.build("${IMAGE_NAME}")
+        steps {
+            app = docker.build("${IMAGE_NAME}")
+        }   
       }
 
       stage ('Push Image') {
-        docker.withRegistry("${REGISTRY_HOST}") {
-            app.push("${BUILD_ID}")
-            app.push("latest")
+        steps {
+            docker.withRegistry("${REGISTRY_HOST}") {
+                app.push("${BUILD_ID}")
+                app.push("latest")
+            }
         }
       }
 
