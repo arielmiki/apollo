@@ -9,6 +9,7 @@ pipeline {
      REGISTRY_HOST = "registry:5000"
      SERVICE_NAME = "apollo"
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
+     REPOSITORY_TAG = "${REGISTRY_HOST}/${IMAGE_NAME}:${BUILD_ID}"
    }
 
    stages {
@@ -20,20 +21,13 @@ pipeline {
 
       stage('Build Docker Image') {
         steps {
-            script {
-                def app = docker.build("${IMAGE_NAME}")
-            }
+            sh "docker build -t ${REPOSITORY_TAG} . --no-cache"
         }   
       }
 
       stage ('Push Image') {
         steps {
-            script {
-                docker.withRegistry("${REGISTRY_HOST}") {
-                    app.push("${BUILD_ID}")
-                    app.push("latest")
-                }
-            }
+             sh "docker image push ${REPOSITORY_TAG}"
         }
       }
 
