@@ -11,14 +11,14 @@ pipeline {
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
    }
 
-    stages('Initialize'){
-        steps {
-            def dockerHome = tool 'docker-builder'
-            env.PATH = "${dockerHome}/bin:${env.PATH}"
-        }
-    }
-
    stages {
+       stage('Initialize'){
+            steps {
+                def dockerHome = tool 'docker-builder'
+                env.PATH = "${dockerHome}/bin:${env.PATH}"
+            }
+        }
+        
       stage('Clone Repository') {
         steps {
             checkout scm
