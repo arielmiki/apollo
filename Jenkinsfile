@@ -2,13 +2,10 @@ pipeline {
    agent any
 
    environment {
-     // You must set the following environment variables
-     // ORGANIZATION_NAME
-     // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
-
      REGISTRY_HOST = "http://localhost:5000"
      SERVICE_NAME = "apollo"
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
+     IMAGE_TAG = "${GIT_COMMIT[0..7]}"
    }
 
    stages {
@@ -39,7 +36,7 @@ pipeline {
         steps {
             script {
                 docker.withRegistry("${REGISTRY_HOST}") {
-                    app.push("${GIT_COMMIT[0..7]}")
+                    app.push("${IMAGE_TAG}")
                     app.push("latest")
                 }
             }
