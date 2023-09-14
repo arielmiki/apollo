@@ -14,8 +14,6 @@ pipeline {
    stages {
        stage('Initialize'){
             steps {
-
-                sh 'printenv'
                 script {
                     def dockerHome = tool 'docker-builder'
                     env.PATH = "${dockerHome}/bin:${env.PATH}"
@@ -41,7 +39,7 @@ pipeline {
         steps {
             script {
                 docker.withRegistry("${REGISTRY_HOST}") {
-                    app.push("${BUILD_ID}")
+                    app.push("${GIT_COMMIT}")
                     app.push("latest")
                 }
             }
