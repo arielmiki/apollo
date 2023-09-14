@@ -39,7 +39,7 @@ pipeline {
         steps {
             script {
                 docker.withRegistry("${REGISTRY_HOST}") {
-                    app.push("${GIT_REVISION,length=8}")
+                    app.push("${GIT_COMMIT,length=8}")
                     app.push("latest")
                 }
             }
