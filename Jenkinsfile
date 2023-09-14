@@ -9,7 +9,6 @@ pipeline {
      REGISTRY_HOST = "http://localhost:5000"
      SERVICE_NAME = "apollo"
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
-     IMAGE_TAG = "${GIT_REVISION,length=8}"
    }
 
    stages {
@@ -40,7 +39,7 @@ pipeline {
         steps {
             script {
                 docker.withRegistry("${REGISTRY_HOST}") {
-                    app.push("${IMAGE_TAG}")
+                    app.push("${GIT_REVISION,length=8}")
                     app.push("latest")
                 }
             }
