@@ -9,7 +9,7 @@ pipeline {
      REGISTRY_HOST = "http://localhost:5000"
      SERVICE_NAME = "apollo"
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
-     IMAGE_TAG = "${GIT_REVISION:0:7}"
+     IMAGE_TAG = "${GIT_REVISION,length=8}"
    }
 
    stages {
