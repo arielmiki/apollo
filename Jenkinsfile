@@ -6,7 +6,7 @@ pipeline {
      // ORGANIZATION_NAME
      // YOUR_DOCKERHUB_USERNAME (it doesn't matter if you don't have one)
 
-     REGISTRY_HOST = "http://registry:5000"
+     REGISTRY_HOST = "http://172.17.0.3:5000"
      SERVICE_NAME = "apollo"
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
    }
@@ -30,7 +30,7 @@ pipeline {
       stage('Build Docker Image') {
         steps {
             script {
-                app = docker.build("${IMAGE_NAME}")
+                app = docker.build("${IMAGE_NAME}", '--no-cache')
             }
         }   
       }
