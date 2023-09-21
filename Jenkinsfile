@@ -48,7 +48,6 @@ pipeline {
     //         sh 'envsubst < ${WORKSPACE}/deploy/deployment.yaml | kubectl apply -f -'
     //       }
     //   }
-
       stage('Notify') {
         steps {
             script {
