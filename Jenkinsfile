@@ -52,7 +52,7 @@ pipeline {
       stage('Notify') {
         steps {
             script {
-              discordSend description: "Jenkins Pipeline Build", link: "http://devops:8080/job/apollo-pipeline/97/console", webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
+              discordSend description: "Jenkins Pipeline Build", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
             }
         }
       }
