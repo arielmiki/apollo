@@ -49,10 +49,10 @@ pipeline {
     //       }
     //   }
 
-    //   stage('Notify') {
-    //     steps {
-    //       discordSend description: "Jenkins Pipeline Build", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1033315263225004143/IwRFaL20IT0U2_MkLJjoSSXUoQYkT77T1WGu7y6WR1GgyePWnIA7e08zvuIft_wGVF3N"
-    //     }
-    //   }
+      stage('Notify') {
+        steps {
+          discordSend description: "Jenkins Pipeline Build", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
+        }
+      }
    }
 }
