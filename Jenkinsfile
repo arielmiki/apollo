@@ -48,10 +48,11 @@ pipeline {
     //         sh 'envsubst < ${WORKSPACE}/deploy/deployment.yaml | kubectl apply -f -'
     //       }
     //   }
+
       stage('Notify') {
         steps {
             script {
-              discordSend link: env.BUILD_URL, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
+              discordSend description: "Jenkins Pipeline Build", link: "${BUILD_URL}", result: currentBuild.currentResult, title: "${JOB_NAME}", webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
             }
         }
       }
