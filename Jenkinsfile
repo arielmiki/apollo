@@ -61,7 +61,7 @@ pipeline {
       // }
    }
 
-  post {
+  post("Notify") {
     always {
       discordSend description: "Jenkins Pipeline Build: ${BUILD_URL}", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
     }
