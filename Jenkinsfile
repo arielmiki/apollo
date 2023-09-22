@@ -44,10 +44,11 @@ pipeline {
       }
 
       stage('Deploy to Cluster') {
+        steps {
           withKubeConfig([credentialsId: 'kubeconfig']) {
             sh 'kubectl apply -f deploy/deployment.yaml'
           }
-
+        }
       }
 
       stage('Notify') {
