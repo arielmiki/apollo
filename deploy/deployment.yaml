@@ -31,6 +31,7 @@ spec:
       containers:
       - name: apollo
         image: registry.arielmiki.com/arielmiki/apollo:latest
+        imagePullPolicy: always
         ports:
           - containerPort: 80
   

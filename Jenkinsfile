@@ -43,11 +43,12 @@ pipeline {
         }
       }
 
-    //   stage('Deploy to Cluster') {
-    //       steps {
-    //         sh 'envsubst < ${WORKSPACE}/deploy/deployment.yaml | kubectl apply -f -'
-    //       }
-    //   }
+      stage('Deploy to Cluster') {
+          withKubeConfig([credentialsId: 'kubeconfig']) {
+            sh 'kubectl apply -f deploy/deployment.yaml'
+          }
+
+      }
 
       stage('Notify') {
         steps {
