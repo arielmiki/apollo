@@ -46,7 +46,7 @@ pipeline {
       stage('Deploy to Cluster') {
         steps {
           withKubeConfig([credentialsId: 'kubeconfig']) {
-            sh 'kubectl apply -f deploy/deployment.yaml'
+            sh "kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}=${IMAGE_NAME}:${IMAGE_TAG}"
           }
         }
       }
