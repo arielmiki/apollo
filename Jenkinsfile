@@ -6,6 +6,7 @@ pipeline {
      SERVICE_NAME = "apollo"
      IMAGE_NAME = "arielmiki/${SERVICE_NAME}"
      IMAGE_TAG = "${GIT_COMMIT[0..7]}"
+     KUBERNETES_IMAGE="registry.arielmiki.com/${IMAGE_NAME}:${IMAGE_TAG}"
    }
 
    stages {
@@ -46,17 +47,23 @@ pipeline {
       stage('Deploy to Cluster') {
         steps {
           withKubeConfig([credentialsId: 'kubeconfig']) {
-            sh "kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}=${IMAGE_NAME}:${IMAGE_TAG}"
+            sh "kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}=${KUBERNETES_IMAGE}"
           }
         }
       }
 
-      stage('Notify') {
-        steps {
-            script {
-              discordSend description: "Jenkins Pipeline Build: ${BUILD_URL}", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
-            }
-        }
-      }
+      // stage('Notify') {
+      //   steps {
+      //       script {
+      //         discordSend description: "Jenkins Pipeline Build: ${BUILD_URL}", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
+      //       }
+      //   }
+      // }
    }
+
+  post {
+    always {
+      discordSend description: "Jenkins Pipeline Build: ${BUILD_URL}", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/1154397409569423392/7W8FH-7u1QXanX4mWG_CXgmPWtW9_db3Rqjs9st3aWkPLdwL1gYgXQeG8csjnj95AoCa"
+    }
+  }
 }
