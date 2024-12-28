@@ -22,7 +22,7 @@ const projects = [
       'Built extensible architecture to support adding new target languages in the future',
       'Developed comprehensive test suite and documentation to ensure reliability and ease of use'
     ],
-    stack: ['Python', 'ANTLR4', 'LLM', 'Langchain', 'FastAPI', 'Docker'],
+    stack: ['Python', 'LLM', 'Langchain', 'FastAPI', 'Docker'],
     github: 'https://github.com/arielmiki/txtlang',
     link: 'https://txtlang.dev'
   },
