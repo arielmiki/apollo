@@ -11,35 +11,40 @@ const experiences = [
     position: 'Software Engineer II',
     duration: 'Feb. 2024 - Present',
     stack: ['Golang', 'Redis', 'ClickHouse', 'Python', 'SQLite', 'Abase'],
-    logo: tiktokLogo
+    logo: tiktokLogo,
+    team: 'Live | Data Platform'
   },
   {
     company: 'GovTech',
     position: 'Software Engineer II',
     duration: 'Jul. 2023 - Jan. 2024',
     stack: ['Python', 'Golang', 'Elasticsearch', 'FastAPI', 'AWS', 'Kubernetes'],
-    logo: govtechLogo
+    logo: govtechLogo,
+    team: 'PIC | GASP'
   },
   {
     company: 'Indeed',
     position: 'Software Engineer II',
     duration: 'Sep. 2022 - May. 2023',
     stack: ['Java', 'React', 'Typescript', 'Spring', 'GraphQL', 'Presto', 'Python'],
-    logo: indeedLogo
+    logo: indeedLogo,
+    team: 'Job Seeker | ACME'
   },
   {
     company: 'Shopee',
     position: 'Software Engineer',
     duration: 'Jul. 2021 - Sep. 2022',
     stack: ['Golang', 'Python', 'Django', 'Java', 'SQL', 'Apache Flink', 'gRPC'],
-    logo: shopeeLogo
+    logo: shopeeLogo,
+    team: 'Promotion | Discount'
   },
   {
     company: 'Traveloka',
     position: 'Software Engineer',
     duration: 'Dec. 2019 - Jun. 2021',
     stack: ['Java', 'AWS', 'Ansible', 'Terraform', 'SQL', 'MongoDB'],
-    logo: travelokaLogo
+    logo: travelokaLogo,
+    team: 'Flight | PAC'
   }
 ];
 

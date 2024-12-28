@@ -4,6 +4,7 @@ interface ExperienceCardProps {
   duration: string;
   stack: string[];
   logo?: string;
+  team?: string;
 }
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -12,6 +13,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   duration,
   stack,
   logo,
+  team,
 }) => {
   return (
     <div className="relative pl-8 pb-12 group">
@@ -31,6 +33,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <div>
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1">{company}</h3>
               <p className="text-teal-600 text-sm md:text-base">{position}</p>
+              {team && <p className="text-gray-600 text-sm mt-1">{team}</p>}
             </div>
           </div>
           <span className="text-gray-500 text-xs md:text-sm font-medium">{duration}</span>

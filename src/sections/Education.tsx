@@ -18,9 +18,9 @@ export const Education = () => {
   ];
 
   return (
-    <section id="education" className="flex items-center">
+    <section id="experience" className="flex items-center">
       <div className="max-w-3xl mx-auto px-8 w-full">
-        <div className="space-y-12">
+        <div className="space-y-8">
           <div>
             <InstitutionHeader
               logo={uiLogo}
@@ -30,13 +30,13 @@ export const Education = () => {
             />
           </div>
 
-          <div>
+          <div className="space-y-4">
             <SectionHeader title="Publication" />
             <div>
-              <h5 className="font-medium text-gray-900 mb-2">
+              <h5 className="font-medium text-gray-900 mb-3">
                 Minimal Explanations in ReLU-based Neural Network via Abduction
               </h5>
-              <p className="text-gray-600 mb-2">
+              <p className="text-gray-600 mb-3">
                 First Author & Presenter • Proceedings of 2020 International Conference on Advanced Computer Science and Information System (ICACSIS)
               </p>
               <a 
@@ -50,12 +50,12 @@ export const Education = () => {
             </div>
           </div>
           
-          <div>
+          <div className="space-y-4">
             <SectionHeader title="Activities and Societies" />
             <BulletList items={activities} />
           </div>
 
-          <div>
+          <div className="space-y-4">
             <SectionHeader title="Teaching Assistant" />
             <BulletList items={teachingAssistant} />
           </div>

@@ -6,7 +6,7 @@ export const Home = () => {
     <div className="min-h-screen flex items-center px-8 md:px-12">
       <div className="max-w-3xl mx-auto w-full">
         <div className="flex flex-col">
-          <p className="text-amber-700 mb-4">Hello, I'm</p>
+          <p className="text-amber-700 mb-2">Hello, I'm</p>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-1">
             Ariel Miki Abraham
