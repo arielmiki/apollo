@@ -20,7 +20,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white shadow-sm">
+    <header className="fixed w-full top-0 z-50 bg-white">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ export const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-2 bg-white border-t">
+          <nav className="md:hidden py-2 bg-white">
             <Link to="/" className={getMobileLinkClass('/')} onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
