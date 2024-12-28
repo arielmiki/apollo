@@ -8,17 +8,17 @@ export const Home = () => {
         <div className="flex flex-col">
           <p className="text-amber-700 mb-4">Hello, I'm</p>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-2">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-1">
             Ariel Miki Abraham
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-600 mb-6">
-            Software Engineer
-          </h2>
+          <p className="text-base text-gray-600 italic mb-4">
+            software engineer | builder | amatus sum
+          </p>
 
           <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-            I'm a software engineer focused on building efficient and elegant solutions.
-            I enjoy solving complex problems and creating software that makes a difference.
+            I'm a software engineer specializing in distributed systems and AI applications, focused on creating
+            elegant solutions to real-world problems through innovative technology.
           </p>
 
           <div className="space-y-6 mb-8">
