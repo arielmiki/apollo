@@ -36,7 +36,7 @@ const experiences = [
     duration: 'Jul. 2021 - Sep. 2022',
     stack: ['Golang', 'Python', 'Django', 'Java', 'SQL', 'Apache Flink', 'gRPC'],
     logo: shopeeLogo,
-    team: 'Promotion | Discount'
+    team: 'Marketplace | Promotion'
   },
   {
     company: 'Traveloka',
