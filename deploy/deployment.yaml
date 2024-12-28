@@ -29,7 +29,7 @@ spec:
         app: apollo
     spec:
       containers:
-      - name: apollo
+      - name:  apollo
         image: registry.arielmiki.com/arielmiki/apollo:latest
         imagePullPolicy: Always
         ports:
