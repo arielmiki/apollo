@@ -39,7 +39,7 @@ export const Education = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="space-y-4">
             <SectionHeader title="Activities and Societies" />
             <BulletList items={activities} />

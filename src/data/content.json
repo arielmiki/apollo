@@ -2,9 +2,20 @@
   "home": {
     "greeting": "Hello, I'm",
     "name": "Miki",
+    "fullname": "Ariel Miki Abraham",
     "pronunciation": "/ˈmiːki/",
+    "role": "Software Engineer",
     "tagline": "software engineer | builder | amatus sum",
     "description": "I'm a developer who loves building scalable systems and AI applications, turning complex challenges into elegant solutions",
+    "contact": {
+      "phone": "(+65) 81243873 / (+62) 81510002960",
+      "email": "arielmikiabraham@gmail.com",
+      "location": "Singapore",
+      "social": {
+        "github": "arielmiki",
+        "linkedin": "arielmiki"
+      }
+    },
     "interests": [
       {
         "icon": "FaMusic",
@@ -40,6 +51,12 @@
         "company": "Tiktok",
         "position": "Software Engineer II",
         "duration": "Feb. 2024 - Present",
+        "location": "Singapore",
+        "achievements": [
+          "Developed and maintained data visualization platform with custom SQLite calculation engine for business analytics",
+          "Initiated and created tooling to migrate calculation engine DSL from JSON to YAML for improved maintainability and error prevention",
+          "Developed feedback collection and management platform for data and performance indicators"
+        ],
         "stack": ["Golang", "Redis", "ClickHouse", "Python", "SQLite", "Abase"],
         "logo": "tiktokLogo",
         "team": "Live | Data Platform"
@@ -48,6 +65,12 @@
         "company": "GovTech",
         "position": "Software Engineer II",
         "duration": "Jul. 2023 - Jan. 2024",
+        "location": "Singapore",
+        "achievements": [
+          "Conducted comparative analysis of vector database systems for optimal data retrieval and processing",
+          "Spinned-up infrastructure for ML model deployment in AWS from scratch",
+          "Designed data pipeline for a SPF malicious url detection system and ML model retraining"
+        ],
         "stack": ["Python", "Golang", "Elasticsearch", "FastAPI", "AWS", "Kubernetes"],
         "logo": "govtechLogo",
         "team": "PIC | GASP"
@@ -56,6 +79,12 @@
         "company": "Indeed",
         "position": "Software Engineer II",
         "duration": "Sep. 2022 - May. 2023",
+        "location": "Singapore",
+        "achievements": [
+          "Developed and implemented company-wide metrics for tracking KPIs and ROI",
+          "Mentored team members on system design, code pipeline, and software engineering best practices",
+          "Designed location-based recommendation for Indeed search autocomplete"
+        ],
         "stack": ["Java", "React", "Typescript", "Spring", "GraphQL", "Presto", "Python"],
         "logo": "indeedLogo",
         "team": "Job Seeker | ACME"
@@ -64,7 +93,13 @@
         "company": "Shopee",
         "position": "Software Engineer",
         "duration": "Jul. 2021 - Sep. 2022",
-        "stack": ["Golang", "Python", "Django", "Java", "SQL", "Apache Flink", "gRPC"],
+        "location": "Singapore",
+        "achievements": [
+          "Migrated admin portal for payment channel promotions to shared service and deprecate legacy monolithic system",
+          "Resolved promotion race condition issue by implementing Redis lock mechanism",
+          "Developed promotion risk monitoring and management system that can send real-time alerts to stakeholders for overused promotion"
+        ],
+        "stack": ["Golang", "Python", "Django", "Java", "SQL", "Apache Flink", "gRPC", "Protobuf"],
         "logo": "shopeeLogo",
         "team": "Marketplace | Promotion"
       },
@@ -72,6 +107,13 @@
         "company": "Traveloka",
         "position": "Software Engineer",
         "duration": "Dec. 2019 - Jun. 2021",
+        "location": "Jakarta, Indonesia",
+        "achievements": [
+          "Redesigned flight status back-end services to optimize provider calls and integrated with Airport API for improved data reliability",
+          "Optimized refund and reimbursements API from several minutes to below 29 seconds to meet AWS API Gateway timeout requirements",
+          "Led back-end load testing initiatives and socialized testing methodologies to other engineers for AWS infrastructure optimization",
+          "Successfully migrated services, databases, cache, and other infrastructure across multiple AWS accounts"
+        ],
         "stack": ["Java", "AWS", "Ansible", "Terraform", "SQL", "MongoDB"],
         "logo": "travelokaLogo",
         "team": "Flight | PAC"
@@ -83,13 +125,20 @@
       "name": "Universitas Indonesia (UI)",
       "logo": "uiLogo",
       "period": "May. 2016 - Feb. 2020",
-      "degree": "Bachelor of Computer Science (S.Kom)"
+      "degree": "Bachelor of Computer Science (S.Kom)",
+      "location": "Depok, Indonesia",
+      "achievements": [
+        "Graduated Cum Laude with GPA 3.81/4.00",
+        "Selected as teaching assistants of Discrete Mathematics 1 & 2, Programming Foundations 1, and Advance Programming"
+      ]
     },
     "publication": {
       "title": "Minimal Explanations in ReLU-based Neural Network via Abduction",
       "role": "First Author & Presenter",
       "conference": "Proceedings of 2020 International Conference on Advanced Computer Science and Information System (ICACSIS)",
-      "doi": "10.1109/ICACSIS51025.2020.9263197"
+      "doi": "10.1109/ICACSIS51025.2020.9263197",
+      "location": "Depok, Indonesia",
+      "date": "Oct. 2020"
     },
     "activities": [
       "Head of Data Science at RISTEK",
@@ -107,31 +156,33 @@
     {
       "title": "Eatbuddy",
       "event": "Personal Project",
-      "description": [
+      "achievements": [
         "Developed a restaurant discovery platform using AI-powered recommendations",
         "Implemented vector embeddings to provide personalized food and restaurant suggestions based on user preferences",
         "Integrated LLM capabilities to generate intelligent summaries of restaurant reviews and curate dish recommendations",
         "Deployed scalable microservices architecture on a bare metal home server using Kubernetes and Docker"
       ],
       "stack": ["LLM", "FastAPI", "Langchain", "MongoDB", "React", "Vite", "Kubernetes", "Docker"],
-      "link": "https://eatbuddy.app"
+      "link": "https://eatbuddy.app",
+      "icon": "FaUtensils"
     },
     {
       "title": "zkBlackjack",
       "event": "ETHGlobal Singapore",
-      "description": [
+      "achievements": [
         "Trustless, provably fair Blackjack game using Mina Protocol's zkNoid platform",
         "Implemented zero-knowledge proofs to verify fair card shuffling and dealing without revealing card values",
         "Developed a seamless web interface for anonymous gameplay with cryptographic proof of fairness",
         "Awarded 2nd place in Mina Protocol's zkGaming track"
       ],
       "stack": ["Mina Protocol", "zkNoid", "Zero-Knowledge Proofs", "React", "TypeScript"],
-      "link": "https://ethglobal.com/showcase/zkblackjack-hjrpn"
+      "link": "https://ethglobal.com/showcase/zkblackjack-hjrpn",
+      "icon": "FaDice"
     },
     {
       "title": "txtlang",
       "event": "Personal Project",
-      "description": [
+      "achievements": [
         "Created a revolutionary programming language that enables coding using natural human language",
         "Designed and implemented a compiler that translates natural language to multiple target languages including Go and Python",
         "Built extensible architecture to support adding new target languages in the future",
@@ -139,18 +190,21 @@
       ],
       "stack": ["Python", "LLM", "Langchain", "FastAPI", "Docker"],
       "github": "https://github.com/arielmiki/txtlang",
-      "link": "https://txtlang.dev"
+      "link": "https://txtlang.dev",
+      "icon": "FaCode"
     },
     {
-      "title": "KLEMM",
-      "event": "UI Incubate",
-      "description": [
-        "Led backend development in a startup incubated by University of Indonesia",
-        "Architected and implemented complete backend system including RESTful APIs, microservices, and database design",
-        "Established robust CI/CD pipeline and infrastructure using Kubernetes, Docker, and Terraform",
-        "Optimized system performance and scalability through microservices architecture and caching strategies"
-      ],
-      "stack": ["Golang", "gRPC", "MongoDB", "MySQL", "Kubernetes", "Docker", "Terraform"]
-    }
+        "title": "KLEMM",
+        "role": "Back-End Developer",
+        "event": "UI Incubate",
+        "achievements": [
+          "Led backend development in a startup incubated by University of Indonesia",
+          "Architected and implemented complete backend system including RESTful APIs, microservices, and database design",
+          "Established robust CI/CD pipeline and infrastructure using Kubernetes, Docker, and Terraform",
+          "Optimized system performance and scalability through microservices architecture and caching strategies"
+        ],
+        "stack": ["Golang", "gRPC", "MongoDB", "MySQL", "Kubernetes", "Docker", "Terraform"],
+        "icon": "FaServer"
+      }
   ]
 } 

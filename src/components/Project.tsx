@@ -1,16 +1,17 @@
 interface ProjectProps {
   title: string;
   event: string;
-  description: string[];
+  achievements: string[];
   stack: string[];
   link?: string;
   github?: string;
+  icon: string;
 }
 
 export const Project: React.FC<ProjectProps> = ({
   title,
   event,
-  description,
+  achievements,
   stack,
   link,
   github
@@ -56,7 +57,7 @@ export const Project: React.FC<ProjectProps> = ({
         </div>
       </div>
       <ul className="list-none mb-6 space-y-3">
-        {description.map((item, index) => (
+        {achievements.map((item, index) => (
           <li key={index} className="text-gray-700 pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-amber-700">
             {item}
           </li>

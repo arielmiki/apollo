@@ -1,14 +1,18 @@
-import { FaMusic, FaUtensils, FaGithub, FaLinkedin, FaDice } from 'react-icons/fa';
+import { FaMusic, FaUtensils, FaGithub, FaLinkedin, FaDice, FaFilePdf, FaServer, FaCode } from 'react-icons/fa';
 import content from '../data/content.json';
 import { InterestItem } from '../components/InterestItem';
 import { SocialLink } from '../components/SocialLink';
+import { generateResume } from '../utils/generateResume';
 
 const iconMap = {
   FaMusic,
   FaUtensils,
   FaDice,
   FaGithub,
-  FaLinkedin
+  FaLinkedin,
+  FaServer,
+  FaCode,
+  FaFilePdf
 };
 
 export const Home = () => {
@@ -63,6 +67,12 @@ export const Home = () => {
               />
             );
           })}
+          <button
+            onClick={generateResume}
+            className="text-red-600 hover:text-red-700 transition-colors"
+          >
+            <FaFilePdf size={24} />
+          </button>
         </div>
       </div>
     </div>
