@@ -20,7 +20,7 @@ const projects = [
       'Trustless, provably fair Blackjack game using Mina Protocol\'s zkNoid platform',
       'Implemented zero-knowledge proofs to verify fair card shuffling and dealing without revealing card values',
       'Developed a seamless web interface for anonymous gameplay with cryptographic proof of fairness',
-      'Mina Protocol - zkGaming on Mina 2nd place'
+      'Awarded 2nd place in Mina Protocol\'s zkGaming track'
     ],
     stack: ['Mina Protocol', 'zkNoid', 'Zero-Knowledge Proofs', 'React', 'TypeScript'],
     link: 'https://ethglobal.com/showcase/zkblackjack-hjrpn'
