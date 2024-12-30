@@ -43,7 +43,7 @@ export const Home = () => {
 
               <div className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
-                  <GiPokerHand className="w-7 h-7 text-amber-700" />
+                  <GiPokerHand className="w-8 h-8 text-amber-700" />
                 </div>
                 <span className="text-gray-700 group-hover:text-amber-700 transition-colors">
                   Playing poker and practicing trading strategy

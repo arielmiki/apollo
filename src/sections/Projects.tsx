@@ -2,6 +2,18 @@ import { Project } from '../components/Project';
 
 const projects = [
   {
+    title: 'zkBlackjack',
+    role: 'ETHGlobal Singapore',
+    description: [
+      'Trustless, provably fair Blackjack game using Mina Protocol\'s zkNoid platform',
+      'Implemented zero-knowledge proofs to verify fair card shuffling and dealing without revealing card values',
+      'Developed a seamless web interface for anonymous gameplay with cryptographic proof of fairness',
+      'Mina Protocol - zkGaming on Mina 2nd place'
+    ],
+    stack: ['Mina Protocol', 'zkNoid', 'Zero-Knowledge Proofs', 'React', 'TypeScript'],
+    link: 'https://ethglobal.com/showcase/zkblackjack-hjrpn'
+  },
+  {
     title: 'Eatbuddy',
     role: 'Personal Project',
     description: [
@@ -28,7 +40,7 @@ const projects = [
   },
   {
     title: 'KLEMM',
-    role: 'Lead Backend Developer',
+    role: 'UI Incubate',
     description: [
       'Led backend development in a startup incubated by University of Indonesia',
       'Architected and implemented complete backend system including RESTful APIs, microservices, and database design',
