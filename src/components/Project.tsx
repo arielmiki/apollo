@@ -1,6 +1,6 @@
 interface ProjectProps {
   title: string;
-  role: string;
+  event: string;
   description: string[];
   stack: string[];
   link?: string;
@@ -9,7 +9,7 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = ({
   title,
-  role,
+  event,
   description,
   stack,
   link,
@@ -20,7 +20,7 @@ export const Project: React.FC<ProjectProps> = ({
       <div className="mb-6 flex justify-between items-start">
         <div>
           <div className="inline-block px-4 py-2 bg-teal-50 text-teal-600 rounded-lg text-sm font-medium mb-4">
-            {role}
+            {event}
           </div>
           <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
         </div>

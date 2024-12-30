@@ -1,0 +1,156 @@
+{
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Miki",
+    "pronunciation": "/ˈmiːki/",
+    "tagline": "software engineer | builder | amatus sum",
+    "description": "I'm a developer who loves building scalable systems and AI applications, turning complex challenges into elegant solutions",
+    "interests": [
+      {
+        "icon": "FaMusic",
+        "text": "Exploring the world of music"
+      },
+      {
+        "icon": "FaUtensils",
+        "text": "Experimenting with new recipes in the kitchen"
+      },
+      {
+        "icon": "FaDice",
+        "text": "Playing poker and practicing trading strategy"
+      }
+    ],
+    "socialLinks": [
+      {
+        "platform": "github",
+        "icon": "FaGithub",
+        "url": "https://github.com/arielmiki",
+        "color": "#24292e"
+      },
+      {
+        "platform": "linkedin",
+        "icon": "FaLinkedin",
+        "url": "https://linkedin.com/in/arielmiki",
+        "color": "#0A66C2"
+      }
+    ]
+  },
+  "experience": {
+    "positions": [
+      {
+        "company": "Tiktok",
+        "position": "Software Engineer II",
+        "duration": "Feb. 2024 - Present",
+        "stack": ["Golang", "Redis", "ClickHouse", "Python", "SQLite", "Abase"],
+        "logo": "tiktokLogo",
+        "team": "Live | Data Platform"
+      },
+      {
+        "company": "GovTech",
+        "position": "Software Engineer II",
+        "duration": "Jul. 2023 - Jan. 2024",
+        "stack": ["Python", "Golang", "Elasticsearch", "FastAPI", "AWS", "Kubernetes"],
+        "logo": "govtechLogo",
+        "team": "PIC | GASP"
+      },
+      {
+        "company": "Indeed",
+        "position": "Software Engineer II",
+        "duration": "Sep. 2022 - May. 2023",
+        "stack": ["Java", "React", "Typescript", "Spring", "GraphQL", "Presto", "Python"],
+        "logo": "indeedLogo",
+        "team": "Job Seeker | ACME"
+      },
+      {
+        "company": "Shopee",
+        "position": "Software Engineer",
+        "duration": "Jul. 2021 - Sep. 2022",
+        "stack": ["Golang", "Python", "Django", "Java", "SQL", "Apache Flink", "gRPC"],
+        "logo": "shopeeLogo",
+        "team": "Marketplace | Promotion"
+      },
+      {
+        "company": "Traveloka",
+        "position": "Software Engineer",
+        "duration": "Dec. 2019 - Jun. 2021",
+        "stack": ["Java", "AWS", "Ansible", "Terraform", "SQL", "MongoDB"],
+        "logo": "travelokaLogo",
+        "team": "Flight | PAC"
+      }
+    ]
+  },
+  "education": {
+    "university": {
+      "name": "Universitas Indonesia (UI)",
+      "logo": "uiLogo",
+      "period": "May. 2016 - Feb. 2020",
+      "degree": "Bachelor of Computer Science (S.Kom)"
+    },
+    "publication": {
+      "title": "Minimal Explanations in ReLU-based Neural Network via Abduction",
+      "role": "First Author & Presenter",
+      "conference": "Proceedings of 2020 International Conference on Advanced Computer Science and Information System (ICACSIS)",
+      "doi": "10.1109/ICACSIS51025.2020.9263197"
+    },
+    "activities": [
+      "Head of Data Science at RISTEK",
+      "Data Science Staff at Compfest X",
+      "Bedah Kampus UI 2018"
+    ],
+    "teachingAssistant": [
+      "Discrete Mathematics 1",
+      "Discrete Mathematics 2",
+      "Foundation of Programming 1",
+      "Advance Programming"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Eatbuddy",
+      "event": "Personal Project",
+      "description": [
+        "Developed a restaurant discovery platform using AI-powered recommendations",
+        "Implemented vector embeddings to provide personalized food and restaurant suggestions based on user preferences",
+        "Integrated LLM capabilities to generate intelligent summaries of restaurant reviews and curate dish recommendations",
+        "Deployed scalable microservices architecture on a bare metal home server using Kubernetes and Docker"
+      ],
+      "stack": ["LLM", "FastAPI", "Langchain", "MongoDB", "React", "Vite", "Kubernetes", "Docker"],
+      "link": "https://eatbuddy.app"
+    },
+    {
+      "title": "zkBlackjack",
+      "event": "ETHGlobal Singapore",
+      "description": [
+        "Trustless, provably fair Blackjack game using Mina Protocol's zkNoid platform",
+        "Implemented zero-knowledge proofs to verify fair card shuffling and dealing without revealing card values",
+        "Developed a seamless web interface for anonymous gameplay with cryptographic proof of fairness",
+        "Awarded 2nd place in Mina Protocol's zkGaming track"
+      ],
+      "stack": ["Mina Protocol", "zkNoid", "Zero-Knowledge Proofs", "React", "TypeScript"],
+      "link": "https://ethglobal.com/showcase/zkblackjack-hjrpn"
+    },
+    {
+      "title": "txtlang",
+      "event": "Personal Project",
+      "description": [
+        "Created a revolutionary programming language that enables coding using natural human language",
+        "Designed and implemented a compiler that translates natural language to multiple target languages including Go and Python",
+        "Built extensible architecture to support adding new target languages in the future",
+        "Developed comprehensive test suite and documentation to ensure reliability and ease of use"
+      ],
+      "stack": ["Python", "LLM", "Langchain", "FastAPI", "Docker"],
+      "github": "https://github.com/arielmiki/txtlang",
+      "link": "https://txtlang.dev"
+    },
+    {
+      "title": "KLEMM",
+      "event": "UI Incubate",
+      "description": [
+        "Led backend development in a startup incubated by University of Indonesia",
+        "Architected and implemented complete backend system including RESTful APIs, microservices, and database design",
+        "Established robust CI/CD pipeline and infrastructure using Kubernetes, Docker, and Terraform",
+        "Optimized system performance and scalability through microservices architecture and caching strategies"
+      ],
+      "stack": ["Golang", "gRPC", "MongoDB", "MySQL", "Kubernetes", "Docker", "Terraform"]
+    }
+  ]
+} 
