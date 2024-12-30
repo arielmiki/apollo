@@ -8,8 +8,13 @@ export const Home = () => {
         <div className="flex flex-col">
           <p className="text-amber-700 mb-2">Hello, I'm</p>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-1">
-            Ariel Miki Abraham
+          <h1 className="flex items-baseline gap-3 mb-1">
+            <span className="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight">
+              Miki
+            </span>
+            <span className="text-xl md:text-2xl font-light text-gray-400 tracking-wide">
+              /ˈmiːki/
+            </span>
           </h1>
           
           <p className="text-base text-gray-600 italic mb-4">
