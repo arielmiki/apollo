@@ -2,7 +2,6 @@ import { FaMusic, FaUtensils, FaGithub, FaLinkedin, FaDice, FaFilePdf, FaServer,
 import content from '../data/content.json';
 import { InterestItem } from '../components/InterestItem';
 import { SocialLink } from '../components/SocialLink';
-import { generateResume } from '../utils/generateResume';
 
 const iconMap = {
   FaMusic,
