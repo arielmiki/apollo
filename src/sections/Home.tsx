@@ -67,12 +67,6 @@ export const Home = () => {
               />
             );
           })}
-          <button
-            onClick={generateResume}
-            className="text-red-600 hover:text-red-700 transition-colors"
-          >
-            <FaFilePdf size={24} />
-          </button>
         </div>
       </div>
     </div>
