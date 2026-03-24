@@ -190,7 +190,6 @@
       ],
       "stack": ["Python", "LLM", "Langchain", "FastAPI", "Docker"],
       "github": "https://github.com/arielmiki/txtlang",
-      "link": "https://txtlang.dev",
       "icon": "FaCode"
     },
     {
