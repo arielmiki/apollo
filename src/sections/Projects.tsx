@@ -1,4 +1,5 @@
 import { Project } from '../components/Project';
+import { AnimatedSection } from '../components/AnimatedSection';
 import content from '../data/content.json';
 
 export const Projects = () => {
@@ -7,10 +8,12 @@ export const Projects = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="space-y-6">
           {content.projects.map((project, index) => (
-            <Project key={index} {...project} />
+            <AnimatedSection key={index} delay={index * 100}>
+              <Project {...project} />
+            </AnimatedSection>
           ))}
         </div>
       </div>
     </section>
   );
-}; 
+};
