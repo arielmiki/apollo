@@ -17,21 +17,21 @@ export const Project: React.FC<ProjectProps> = ({
   github
 }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-8 mb-6 transition-all duration-300">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 mb-6 transition-all duration-300">
       <div className="mb-6 flex justify-between items-start">
         <div>
-          <div className="inline-block px-4 py-2 bg-teal-50 text-teal-600 rounded-lg text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-lg text-sm font-medium mb-4">
             {event}
           </div>
-          <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{title}</h3>
         </div>
         <div className="flex gap-1">
           {github && (
-            <a 
+            <a
               href={github}
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-600"
+              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 transition-colors"
               title="View GitHub"
             >
               <span className="text-sm font-medium hidden sm:inline">GitHub</span>
@@ -41,11 +41,11 @@ export const Project: React.FC<ProjectProps> = ({
             </a>
           )}
           {link && (
-            <a 
-              href={link} 
-              target="_blank" 
+            <a
+              href={link}
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-600"
+              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 transition-colors"
               title="View Project"
             >
               <span className="text-sm font-medium hidden sm:inline">View</span>
@@ -58,17 +58,17 @@ export const Project: React.FC<ProjectProps> = ({
       </div>
       <ul className="list-none mb-6 space-y-3">
         {achievements.map((item, index) => (
-          <li key={index} className="text-gray-700 pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-amber-700">
+          <li key={index} className="text-gray-700 dark:text-gray-300 pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-amber-700 dark:before:text-amber-400">
             {item}
           </li>
         ))}
       </ul>
-      <div className="pt-4 border-t border-gray-100">
+      <div className="pt-4 border-t border-gray-100 dark:border-gray-700">
         <div className="flex flex-wrap gap-2">
           {stack.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm font-medium"
+              className="px-3 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full text-sm font-medium"
             >
               {tech}
             </span>
@@ -77,4 +77,4 @@ export const Project: React.FC<ProjectProps> = ({
       </div>
     </div>
   );
-}; 
+};

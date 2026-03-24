@@ -20,22 +20,22 @@ export const Home = () => {
   return (
     <div className="max-w-3xl mx-auto w-full">
       <div className="flex flex-col">
-        <p className="text-amber-700 mb-2">{greeting}</p>
-        
+        <p className="text-amber-700 dark:text-amber-500 mb-2">{greeting}</p>
+
         <h1 className="flex items-baseline gap-3 mb-1">
-          <span className="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight">
+          <span className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white tracking-tight">
             {name}
           </span>
-          <span className="text-xl md:text-2xl font-light text-gray-400 tracking-wide">
+          <span className="text-xl md:text-2xl font-light text-gray-400 dark:text-gray-500 tracking-wide">
             {pronunciation}
           </span>
         </h1>
-        
-        <p className="text-base text-gray-600 italic mb-4">
+
+        <p className="text-base text-gray-600 dark:text-gray-400 italic mb-4">
           {tagline}
         </p>
 
-        <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed">
           {description}
         </p>
 
@@ -70,4 +70,4 @@ export const Home = () => {
       </div>
     </div>
   );
-}; 
+};

@@ -23,17 +23,17 @@ export const Education = () => {
           <div className="space-y-4">
             <SectionHeader title="Publication" />
             <div>
-              <h5 className="font-medium text-gray-900 mb-3">
+              <h5 className="font-medium text-gray-900 dark:text-white mb-3">
                 {publication.title}
               </h5>
-              <p className="text-gray-600 mb-3">
+              <p className="text-gray-600 dark:text-gray-400 mb-3">
                 {publication.role} • {publication.conference}
               </p>
-              <a 
-                href={`https://doi.org/${publication.doi}`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-amber-600 hover:text-amber-700 text-sm inline-flex items-center"
+              <a
+                href={`https://doi.org/${publication.doi}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 text-sm inline-flex items-center transition-colors"
               >
                 DOI: {publication.doi}
               </a>
@@ -53,4 +53,4 @@ export const Education = () => {
       </div>
     </section>
   );
-}; 
+};

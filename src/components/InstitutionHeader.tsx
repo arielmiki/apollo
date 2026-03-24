@@ -9,21 +9,22 @@ export const InstitutionHeader = ({ logo, name, period, degree }: InstitutionHea
   return (
     <>
       {degree && (
-        <div className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-lg text-sm font-medium mb-4">
+        <div className="inline-block px-4 py-2 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-lg text-sm font-medium mb-4">
           {degree}
         </div>
       )}
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
         <div className="flex items-center gap-3">
-          <img 
-            src={logo} 
-            alt={`${name} Logo`} 
+          <img
+            src={logo}
+            alt={`${name} Logo`}
+            loading="lazy"
             className="w-12 h-12 object-contain"
           />
-          <h3 className="text-xl font-bold text-gray-900">{name}</h3>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{name}</h3>
         </div>
-        <p className="text-gray-600 text-sm">{period}</p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">{period}</p>
       </div>
     </>
   );
-}; 
+};
