@@ -25,14 +25,17 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+        <div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-950">
           <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">
               Something went wrong
             </h1>
+            <p className="text-slate-500 dark:text-slate-400 mb-6">
+              An unexpected error occurred. Please try refreshing the page.
+            </p>
             <button
               onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
+              className="px-6 py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors font-medium"
             >
               Reload page
             </button>

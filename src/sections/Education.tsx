@@ -22,11 +22,11 @@ export const Education = () => {
 
           <div className="space-y-4">
             <SectionHeader title="Publication" />
-            <div>
-              <h5 className="font-medium text-gray-900 dark:text-white mb-3">
+            <div className="bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 border border-slate-100 dark:border-slate-800">
+              <h5 className="font-medium text-slate-900 dark:text-slate-100 mb-2">
                 {publication.title}
               </h5>
-              <p className="text-gray-600 dark:text-gray-400 mb-3">
+              <p className="text-slate-600 dark:text-slate-400 mb-3 text-sm">
                 {publication.role} • {publication.conference}
               </p>
               <a

@@ -6,10 +6,10 @@ interface BulletListProps {
 
 export const BulletList = ({ items }: BulletListProps) => {
   return (
-    <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+    <ul className="space-y-2.5 text-slate-600 dark:text-slate-300">
       {items.map((item, index) => (
         <li key={index} className="flex items-start">
-          <span className="text-amber-600 dark:text-amber-400 mr-2">•</span>
+          <span className="text-amber-500 dark:text-amber-400 mr-2 mt-0.5">•</span>
           <span>{item}</span>
         </li>
       ))}

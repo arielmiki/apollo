@@ -10,19 +10,19 @@ export const Header = () => {
   const getLinkClass = (path: string) => {
     const baseClass = "transition-colors text-sm uppercase tracking-wider";
     return location.pathname === path
-      ? `${baseClass} text-amber-700 dark:text-amber-500 font-medium`
-      : `${baseClass} text-gray-600 dark:text-gray-300 hover:text-teal-400 dark:hover:text-teal-400`;
+      ? `${baseClass} text-amber-700 dark:text-amber-400 font-medium`
+      : `${baseClass} text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400`;
   };
 
   const getMobileLinkClass = (path: string) => {
     const baseClass = "block py-2 px-4 text-sm uppercase tracking-wider";
     return location.pathname === path
-      ? `${baseClass} text-amber-700 dark:text-amber-500 font-medium`
-      : `${baseClass} text-gray-600 dark:text-gray-300`;
+      ? `${baseClass} text-amber-700 dark:text-amber-400 font-medium`
+      : `${baseClass} text-slate-600 dark:text-slate-400`;
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <header className="fixed w-full top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-100 dark:border-slate-800/50 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Desktop Navigation */}
@@ -37,7 +37,7 @@ export const Header = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-600 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded transition-colors"
+              className="p-2 text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500/50 rounded-lg transition-colors"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? (
@@ -54,7 +54,7 @@ export const Header = () => {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-amber-700 dark:hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
+              className="md:hidden p-2 text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500/50 rounded-lg"
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
@@ -82,7 +82,7 @@ export const Header = () => {
         {isMenuOpen && (
           <nav
             id="mobile-menu"
-            className="md:hidden py-2 bg-white dark:bg-gray-900"
+            className="md:hidden py-2 bg-white dark:bg-slate-950"
             role="navigation"
             aria-label="Mobile navigation"
           >
